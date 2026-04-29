@@ -46,7 +46,7 @@ Node* make_assignment(char *name, int value){
 Node* make_assignment_var(char *name, char *var){
     Node* n = alloc_node(NODE_ASSIGNMENT);
     n->var_name = strdup(name); 
-    n->initializer = make_identifier_node(var);
+    n->initializer = create_identifier_node(var);
     return n;
 }
 
